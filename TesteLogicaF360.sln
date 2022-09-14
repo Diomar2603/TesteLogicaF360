@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaF360", "LogicaF360\LogicaF360.csproj", "{A73678A3-B164-4FB1-883A-8B07051DDB15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLogicaF360", "TestLogicaF360\TestLogicaF360.csproj", "{8F19E615-F53D-44B0-B70B-A7341AA36365}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A73678A3-B164-4FB1-883A-8B07051DDB15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A73678A3-B164-4FB1-883A-8B07051DDB15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A73678A3-B164-4FB1-883A-8B07051DDB15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A73678A3-B164-4FB1-883A-8B07051DDB15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F19E615-F53D-44B0-B70B-A7341AA36365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F19E615-F53D-44B0-B70B-A7341AA36365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F19E615-F53D-44B0-B70B-A7341AA36365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F19E615-F53D-44B0-B70B-A7341AA36365}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {733C8265-CD56-4A10-A069-4AC361144D30}
+	EndGlobalSection
+EndGlobal
