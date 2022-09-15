@@ -20,14 +20,14 @@ namespace LogicaF360.Services
 
         
 
-        public void BaixarTextos(string txtEscolhido)
+        public string BaixarTextos(string txtEscolhido)
         {
 
             var caminhoTexto = Path.Combine(PastaTextos, "klingon-texto" + txtEscolhido + ".txt");
 
             if (!File.Exists(caminhoTexto))
             {
-                Console.WriteLine("O Texto não se encontra na maquina, iremos fazer o Dowload pra você ;)");
+                Console.WriteLine("\n"+"O Texto não se encontra na maquina, iremos fazer o Dowload pra você ;)");
                 try
                 {
                     using (WebClient client = new WebClient())
@@ -46,12 +46,15 @@ namespace LogicaF360.Services
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Erro disparado ao tentar Baixar texto: " + e.Message);
+                    Console.WriteLine("\n"+"Erro disparado ao tentar Baixar texto: " + e.Message
+                        + "\n" + e.InnerException);
                 }
+                return caminhoTexto;
             }
             else
             {
-                Console.WriteLine("O Texto já se encontra na maquina");
+                Console.WriteLine("\n" + "O Texto já se encontra na maquina");
+                return caminhoTexto;
             }
         }
     }
