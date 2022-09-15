@@ -15,7 +15,7 @@ namespace LogicaF360.Entity
 
         public KlingonText(string texto)
         {
-            Palavras = texto.Split(' ').ToList();
+            Palavras = texto.Replace("\n","").Split(' ').ToList();
         }
 
         public int GetQtdPalavras()
