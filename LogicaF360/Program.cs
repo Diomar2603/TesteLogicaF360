@@ -39,6 +39,10 @@ internal class Program
                               txtKlingon.GetQtdPalavras() + " palavras.");
                         Console.WriteLine("O texto " + txtEscolhido + " contem " +
                               txtKlingon.GetQtdProposicoes()+ " proposições.");
+                        Console.WriteLine("O texto " + txtEscolhido + " contem " +
+                              txtKlingon.GetQtdVerbos() + " verbos.");
+                        Console.WriteLine("O texto " + txtEscolhido + " contem " +
+                              txtKlingon.GetQtdVerbosPrimeiraPessoa() + " verbos em primeira pessoa.");
 
                     }
                 }

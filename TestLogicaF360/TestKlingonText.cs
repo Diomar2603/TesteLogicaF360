@@ -7,17 +7,18 @@ namespace TestLogicaF360
     public class TestKlingonText
     {
         //Texto com 21 palavras,
-        const string TextoExemplo = "vwv rhjs vqgvcq pjdvb gjpsmc jsm zhctgvl jwgbbs mccxbmj mbspg cdhsspgx twndc pmpr bzqvnxs wnfwhcrp czj txvghq ltdtqrd plqnjsk rbsx ftc";
+        const string TextoExemplo = "vwv rhmjkijs vqgvcq pjdvb gjpsmc jsm zhctgvl jwgbbs mccxbmj mbspg cdhsspgx twndc pmpr bzqvnxs wnfwhcrp czj txvghq ltdtqrd klqnjsok rbsx ftc";
+        KlingonText textoKlingon = new KlingonText(TextoExemplo);
+
 
         [Fact]
-        public void Teste_Validar_Numero_Palavras_VinteEUmInt()
+        public void Teste_Numero_Palavras_VinteEUmInt()
         {
             int numeroPalavras;
             int valorEsperado = 21;
 
-            KlingonText textoKlingon = new KlingonText(TextoExemplo);
-
             numeroPalavras = textoKlingon.GetQtdPalavras();
+
             Assert.Equal(valorEsperado, numeroPalavras);
         }
 
@@ -27,10 +28,33 @@ namespace TestLogicaF360
             int numeroPoposicoes;
             int valorEsperado = 4;
 
-            KlingonText textoKlingon = new KlingonText(TextoExemplo);
             numeroPoposicoes = textoKlingon.GetQtdProposicoes();
 
             Assert.Equal(valorEsperado, numeroPoposicoes);
         }
+
+        [Fact]
+        public void Teste_Numero_Verbos_DoisInt()
+        {
+            int numeroVerbos;
+            int valorEsperado = 2;
+
+            numeroVerbos = textoKlingon.GetQtdVerbos();
+
+            Assert.Equal(valorEsperado, numeroVerbos);
+        }
+
+        [Fact]
+        public void Teste_Numero_Verbos_Primeira_Pessoa_DoisInt()
+        {
+            int numeroVerbosPrimeiraPessoa;
+            int valorEsperado = 1;
+
+            numeroVerbosPrimeiraPessoa = textoKlingon.GetQtdVerbosPrimeiraPessoa();
+
+            Assert.Equal(valorEsperado, numeroVerbosPrimeiraPessoa);
+        }
+
+
     }
 }

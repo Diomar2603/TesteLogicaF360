@@ -22,8 +22,24 @@ namespace LogicaF360.Entity
         {
             return Palavras.Count(palavra => palavra.Length.Equals(3) && 
                              !palavra.Contains('d') &&
-                             !LetrasFoo.Any(letras => palavra.EndsWith(letras.ToString())));
+                             !LetrasFoo.Any(letra => palavra.EndsWith(letra.ToString())));
         }
+
+        public int GetQtdVerbos()
+        {
+
+            return Palavras.Count(palavra => palavra.Length >= 8 &&
+                               LetrasFoo.Any(letra => palavra.EndsWith(letra.ToString())));
+        }
+
+        public int GetQtdVerbosPrimeiraPessoa()
+        {
+
+            return Palavras.Count(palavra => palavra.Length >= 8 &&
+                               LetrasFoo.Any(letra => palavra.EndsWith(letra.ToString())) &&
+                               !LetrasFoo.Any(letra => palavra.StartsWith(letra.ToString())));
+        }
+
 
     }
 }
