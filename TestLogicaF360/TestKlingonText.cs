@@ -48,7 +48,7 @@ namespace TestLogicaF360
         public void Teste_Numero_Verbos_Primeira_Pessoa_DoisInt()
         {
             int numeroVerbosPrimeiraPessoa;
-            int valorEsperado = 3;
+            int valorEsperado = 1;
 
             numeroVerbosPrimeiraPessoa = textoKlingon.GetQtdVerbosPrimeiraPessoa();
 
