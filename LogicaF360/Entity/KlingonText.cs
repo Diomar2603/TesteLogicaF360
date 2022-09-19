@@ -114,7 +114,7 @@ namespace LogicaF360.Entity
             return qtdNumerosBonitos;
         }
 
-        private double ConverterKlingonNumero(string palavra)
+        public double ConverterKlingonNumero(string palavra)
         {
             double valorPalavra = 0;
 
