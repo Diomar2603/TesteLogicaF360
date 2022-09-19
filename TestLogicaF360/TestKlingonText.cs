@@ -8,14 +8,15 @@ namespace TestLogicaF360
     {
         //Texto com 21 palavras,
         const string TextoExemplo = "vwv rhmjkijs vqgvcq pjdvb gjpsmc jsm zhctgvl jwgbbs mccxbmj mbspg cdhsspgx twndc pmpr bzqvnxs wnfwhcrp czj txvghq ltdtqrd klqnjsok rbsx ftc";
-        KlingonText textoKlingon = new KlingonText(TextoExemplo);
+        
 
 
         [Fact]
-        public void Teste_Numero_Palavras_VinteEUmInt()
+        public void GetQtdPalavras_DeveRetornarOValorCorreto()
         {
             int numeroPalavras;
             int valorEsperado = 21;
+            KlingonText textoKlingon = new KlingonText(TextoExemplo);
 
             numeroPalavras = textoKlingon.GetQtdPalavras();
 
@@ -23,10 +24,11 @@ namespace TestLogicaF360
         }
 
         [Fact]
-        public void Teste_Numero_Proposicoes()
+        public void GetQtdProposicoes_DeveRetornarOValorCorreto()
         {
             int numeroPoposicoes;
             int valorEsperado = 4;
+            KlingonText textoKlingon = new KlingonText(TextoExemplo);
 
             numeroPoposicoes = textoKlingon.GetQtdProposicoes();
 
@@ -34,10 +36,11 @@ namespace TestLogicaF360
         }
 
         [Fact]
-        public void Teste_Numero_Verbos_DoisInt()
+        public void GetQtdVerbos_DeveRetornarOValorCorreto()
         {
             int numeroVerbos;
             int valorEsperado = 2;
+            KlingonText textoKlingon = new KlingonText(TextoExemplo);
 
             numeroVerbos = textoKlingon.GetQtdVerbos();
 
@@ -45,15 +48,18 @@ namespace TestLogicaF360
         }
 
         [Fact]
-        public void Teste_Numero_Verbos_Primeira_Pessoa_DoisInt()
+        public void GetQtdVerbosPrimeiraPessoa_DeveRetornarOValorCorreto()
         {
             int numeroVerbosPrimeiraPessoa;
             int valorEsperado = 1;
+            KlingonText textoKlingon = new KlingonText(TextoExemplo);
 
             numeroVerbosPrimeiraPessoa = textoKlingon.GetQtdVerbosPrimeiraPessoa();
 
             Assert.Equal(valorEsperado, numeroVerbosPrimeiraPessoa);
         }
+
+
 
 
     }

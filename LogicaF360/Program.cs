@@ -8,6 +8,7 @@ internal class Program
     {
 
         var downloadService = new DownloadService();
+        var fileService = new  FileService();
 
 
         string continuar;
@@ -23,6 +24,7 @@ internal class Program
             } while (!txtEscolhido.Equals("A") && !txtEscolhido.Equals("B"));
             
             string caminho = downloadService.BaixarTextos(txtEscolhido);
+
 
             var path = Path.GetFullPath(caminho);
 
@@ -43,7 +45,8 @@ internal class Program
                               txtKlingon.GetQtdVerbos() + " verbos.");
                         Console.WriteLine("O texto " + txtEscolhido + " contem " +
                               txtKlingon.GetQtdVerbosPrimeiraPessoa() + " verbos em primeira pessoa.");
-
+                        Console.WriteLine("O texto com o vocabulario ordenado foi adicionado a pasta \"TextoKlingonOrdenado\" .");
+                        fileService.CriarArquivoTextoKlingon(txtKlingon.OrdenarVocabulario(), txtEscolhido);
                     }
                 }
             }
