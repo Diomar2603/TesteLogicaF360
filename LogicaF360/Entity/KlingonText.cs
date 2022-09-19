@@ -96,7 +96,35 @@ namespace LogicaF360.Entity
             return string.Join(" ", vocabularioOrdenado);
         }
 
+        public int GetNumerosBonitos()
+        {
+            int qtdNumerosBonitos = 0;
+            double numPalavra;
 
+            foreach (string palavra in Palavras)
+            {
+                numPalavra = ConverterKlingonNumero(palavra);
+
+                if (numPalavra >= 440566 && numPalavra % 3 == 0)
+                {
+                    qtdNumerosBonitos++;
+                }
+            }
+
+            return qtdNumerosBonitos;
+        }
+
+        private double ConverterKlingonNumero(string palavra)
+        {
+            double valorPalavra = 0;
+
+            for (int i = 0; i < palavra.Length; i++)
+            {
+                valorPalavra += AlfabetoKlingon.IndexOf(palavra[i]) * Math.Pow(20, i);
+            }
+
+            return valorPalavra;
+        }
 
 
     }

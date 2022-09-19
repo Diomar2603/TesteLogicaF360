@@ -46,6 +46,8 @@ internal class Program
                         Console.WriteLine("O texto " + txtEscolhido + " contem " +
                               txtKlingon.GetQtdVerbosPrimeiraPessoa() + " verbos em primeira pessoa.");
                         Console.WriteLine("O texto com o vocabulario ordenado foi adicionado a pasta \"TextoKlingonOrdenado\" .");
+                        Console.WriteLine("O texto " + txtEscolhido + " contem " +
+                              txtKlingon.GetNumerosBonitos() + " números bonitos.");
                         fileService.CriarArquivoTextoKlingon(txtKlingon.OrdenarVocabulario(), txtEscolhido);
                     }
                 }
